@@ -1,104 +1,20 @@
-
 # This is the dictionary for the most common words used on wikipedia. We can use this for when we make comparisons between
 # Wikipedia pages, and ignore these words to not skew the similarity results.
+def main():
+    word_filter = read_text('/Users/jackson/PycharmProjects/pythonProject/commonwords.txt')
+    print(word_filter)
 
-a
-about
-all
-also
-and
-as
-at
-be
-because
-but
-by
-can
-come
-could
-day
-do
-even
-find
-first
-for
-from
-get
-give
-go
-have
-he
-her
-here
-him
-his
-how
-I
-if
-in
-into
-it
-its
-just
-know
-like
-look
-make
-man
-many
-me
-more
-my
-new
-no
-not
-now
-of
-on
-one
-only
-or
-other
-our
-out
-people
-say
-see
-she
-so
-some
-take
-tell
-than
-that
-the
-their
-them
-then
-there
-these
-they
-thing
-think
-this
-those
-time
-to
-two
-up
-use
-very
-want
-way
-we
-well
-what
-when
-which
-who
-will
-with
-would
-year
-you
-your
+
+def read_text(file_name):
+    file_data = []
+    text_file = open(file_name, "r")
+
+    for word in text_file.read().split():
+        file_data.append(word)
+
+    text_file.close()
+    return file_data
+
+
+if __name__ == "__main__":
+    main()

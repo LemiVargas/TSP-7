@@ -1,5 +1,6 @@
 import requests
 
+
 def get_info(title: str) -> dict:
     """
     Takes the given Wikipedia title and returns a dictionary of useful data
@@ -20,5 +21,6 @@ def get_info(title: str) -> dict:
         if photo['type'] == 'image':
             info['media-list'].append(photo['srcset'][0]['src'])
     print(info['media-list'])
+
 
 get_info('Apple')
